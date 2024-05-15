@@ -22,12 +22,13 @@ public class StepDefs {
     public void i_clicked_page(String pageText) {
        practicePage.clickLink(pageText);
     }
+
     @When("I fill the form with valid credentails")
     public void i_fill_the_form_with_valid_credentails() {
 
         practicePage.login();
-
     }
+
     @Then("I should see {string} message")
     public void i_should_see_message(String expectedSuccessMessage) {
 
