@@ -2,6 +2,7 @@ package cydeo.steps;
 
 
 import cydeo.pages.PracticePage;
+import cydeo.utilities.BrowserUtils;
 import cydeo.utilities.ConfigurationReader;
 import cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -17,6 +18,7 @@ public class StepDefs {
     @Given("I am on the home page")
     public void i_am_on_the_home_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("practice_url"));
+        BrowserUtils.waitFor(3);
     }
     @When("I clicked {string} page")
     public void i_clicked_page(String pageText) {
