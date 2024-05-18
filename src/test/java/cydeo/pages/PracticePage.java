@@ -35,7 +35,7 @@ public class PracticePage {
     }
 
     public void login() {
-
+        // ENV VARIABLE ?
 
         String username = ConfigurationReader.getProperty("username");
         String password = ConfigurationReader.getProperty("password");
@@ -43,6 +43,7 @@ public class PracticePage {
         usernameEl.sendKeys(username);
         passwordEl.sendKeys(password);
         loginButton.click();
+
 
 
     }
